@@ -1,9 +1,9 @@
 package org.redesnac.lsgbible.presentation
 
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
@@ -14,14 +14,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-
-
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import dagger.hilt.android.AndroidEntryPoint
-import org.redesnac.lsgbible.presentation.components.BooksScreen
-import org.redesnac.lsgbible.presentation.components.verse.VersesScreen
+import org.redesnac.lsgbible.presentation.book.BooksScreen
+import org.redesnac.lsgbible.presentation.favorite_verse.list.FavoriteVersesScreen
 import org.redesnac.lsgbible.presentation.theme.LSGBibleTheme
+import org.redesnac.lsgbible.presentation.verse.VersesScreen
 
 
 @AndroidEntryPoint
@@ -51,6 +50,9 @@ class MainActivity : ComponentActivity() {
                             )
                         ){
                             VersesScreen()
+                        }
+                        composable(route = Screen.FavoriteVersesScreen.route){
+                            FavoriteVersesScreen()
                         }
                     }
                 }

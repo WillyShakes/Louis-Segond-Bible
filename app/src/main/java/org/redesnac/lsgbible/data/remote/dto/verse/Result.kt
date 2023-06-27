@@ -1,8 +1,10 @@
 package org.redesnac.lsgbible.data.remote.dto.verse
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import org.redesnac.lsgbible.domain.model.verse.Verse
+import org.redesnac.lsgbible.domain.verse.Verse
 
 data class Result (
     val chapterVerseRaw: String,
@@ -203,14 +205,16 @@ data class Segond_1910 (
     val the1: Map<String, VerseDto>
 )
 
+@Entity(tableName = "verse")
 data class VerseDto (
     val chapter: String,
     val book: String,
-    val id: String,
+    @PrimaryKey
+    val id: String = "",
     val verse: String,
     val text: String
 ) {
-    fun toVerse():Verse {
+    fun toVerse(): Verse {
         return Verse(
             chapter = chapter,
             verse = verse,

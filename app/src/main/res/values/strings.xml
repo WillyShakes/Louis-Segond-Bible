@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">La Bible Louis Segond</string>
+    <string name="favorite_verses">Mes Versets Favoris</string>
+    <string name="add_a_favorite_verse">Ajouter un verset favoris</string>
+    <string name="chapter">Chapitre\n</string>
+    <string name="book">Livre\n</string>
+    <string name="verse">Verset\n</string>
+    <string name="cant_insert_verse">Erreur durant d\'insertion du verset dans le database\n</string>
+    <string name="error_insert_verse">Bien vouloir donner toutes les informations.</string>
+    <string name="ok">OK</string>
+    <string name="annuler">Annuler</string>
 </resources>

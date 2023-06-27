@@ -1,6 +1,6 @@
 package org.redesnac.lsgbible.data.remote.dto.book
 
-import org.redesnac.lsgbible.domain.model.book.Book
+import org.redesnac.lsgbible.domain.book.Book
 
 data class BooksResponse (
     val errorLevel: Long,
